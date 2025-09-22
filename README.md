@@ -33,26 +33,31 @@ The OpenFrame harness is ideal for those looking to implement custom SoCs or int
 
 # Project Proposal
 
-## Title: Hardware-Accelerated AES/SHA Integration on OpenFrame
+## Title: Hardware-Accelerated AES Integration on OpenFrame
 
 ### Overview
-This project proposes implementing a hardware-accelerated cryptographic engine (AES/SHA) integrated into the OpenFrame harness.  
-The design will allow secure and efficient data encryption and hashing, enabling applications such as lightweight secure communication, storage protection, and IoT security.
+This project proposes implementing a hardware-accelerated AES (Advanced Encryption Standard) engine integrated into the OpenFrame harness.  
+The design will enable secure and efficient data encryption, supporting applications such as lightweight secure communication, storage protection, and IoT security.
+
+### Motivation
+- With increasing demand for data security in embedded systems, hardware-based AES provides faster and more power-efficient solutions compared to software-only implementations.
+- OpenFrame’s clean-slate design and flexible GPIO mapping make it ideal for integrating such a custom cryptographic accelerator.
 
 ### Objectives
-1. Implement AES-128 and SHA-256 cores in Verilog.
+1. Implement AES-128 encryption core in Verilog.
 2. Expose functionality via GPIO for testing and integration.
 3. Validate design with testbench and simulation.
 4. Harden the design using OpenLane and integrate with the OpenFrame wrapper.
 
 ### Expected Outcomes
-- A hardened AES/SHA core within the OpenFrame user area.
-- Demonstration of secure data encryption/hashing on FPGA/ASIC.
+- A hardened AES-128 core within the OpenFrame user area.
+- Demonstration of secure data encryption on FPGA/ASIC.
 - Open-source release of RTL and verification framework.
 
 ### Future Scope
-- Extension to more cryptographic primitives (RSA, ECC).
+- Extension to AES-192 and AES-256 variants.
 - Integration with a RISC-V core to form a security-enhanced SoC.
+- Potential expansion toward full cryptographic subsystems (e.g., combining AES with SHA or ECC).
 
 
 # openframe_timer_example 
