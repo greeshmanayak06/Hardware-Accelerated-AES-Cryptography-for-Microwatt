@@ -4,6 +4,7 @@ The OpenFrame Project provides an empty harness chip that differs significantly 
 
 <img width="256" alt="Screenshot 2024-06-24 at 12 53 39 PM" src="https://github.com/efabless/openframe_timer_example/assets/67271180/ff58b58b-b9c8-4d5e-b9bc-bf344355fa80">
 
+
 ## Key Characteristics of OpenFrame
 
 1. **Minimalist Design:** 
@@ -29,21 +30,44 @@ The OpenFrame harness is ideal for those looking to implement custom SoCs or int
 2. User area of approximately 15mm².
 3. Supports digital, analog, or mixed-signal designs.
 
-# openframe_timer_example
 
-This example implements a simple timer and connects it to the GPIOs.
+# Project Proposal
 
-## Installation and Setup
+## Title: Hardware-Accelerated AES/SHA Integration on OpenFrame
+
+### Overview
+This project proposes implementing a hardware-accelerated cryptographic engine (AES/SHA) integrated into the OpenFrame harness.  
+The design will allow secure and efficient data encryption and hashing, enabling applications such as lightweight secure communication, storage protection, and IoT security.
+
+### Objectives
+1. Implement AES-128 and SHA-256 cores in Verilog.
+2. Expose functionality via GPIO for testing and integration.
+3. Validate design with testbench and simulation.
+4. Harden the design using OpenLane and integrate with the OpenFrame wrapper.
+
+### Expected Outcomes
+- A hardened AES/SHA core within the OpenFrame user area.
+- Demonstration of secure data encryption/hashing on FPGA/ASIC.
+- Open-source release of RTL and verification framework.
+
+### Future Scope
+- Extension to more cryptographic primitives (RSA, ECC).
+- Integration with a RISC-V core to form a security-enhanced SoC.
+
+
+# openframe_timer_example 
+This example implements a simple timer and connects it to the GPIOs. 
+
+## Installation and Setup 
 
 First, clone the repository:
 
 ```bash
 git clone https://github.com/efabless/openframe_timer_example.git
 cd openframe_timer_example
-```
+``
 
 Then, download all dependencies:
-
 ```bash
 make setup
 ```
